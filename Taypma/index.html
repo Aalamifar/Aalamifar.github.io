@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تایپما - تایپ صوتی و تبدیل فایل صوتی به متن</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="02.ico" type="image/x-icon">
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
+    <style>
+        /* استایل‌های عمومی */
+        body {
+            background: linear-gradient(to right, #f3e5ab, #ff9800);
+            font-family: 'Vazirmatn', sans-serif;
+            text-align: right;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+        }
+        .editor-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .ck-editor__editable {
+            min-height: 250px;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            text-align: right;
+            direction: rtl;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .btn-custom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            padding: 15px;
+            background: linear-gradient(to right, #ff9800, #f57c00);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 15px;
+            transition: all 0.3s ease-in-out;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom i {
+            margin-right: 10px;
+        }
+        .btn-custom:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to right, #f57c00, #ff9800);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 15px;
+            background: #ff9800;
+        }
+        h3 {
+            margin-bottom: 10px;  /* کاهش فاصله زیر عنوان */
+        }
+
+        .description {
+            margin-top: 10px;  /* کاهش فاصله بالا */
+            font-size: 16px;
+            font-weight: 400;
+            color: #333;
+            line-height: 1.6;
+            max-width: 550px;
+        }
+
+        /* بخش درباره ما */
+        #about {
+            background-color: #fff;
+            padding: 40px 0;
+        }
+        .section-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .image-container img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+        /* سوالات متداول */
+        #faq {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+        }
+        .accordion .card-header {
+            background-color: #ff9800;
+            color: white;
+        }
+        .accordion .card-body {
+            background-color: #fff;
+        }
+        /* ویژگی‌ها */
+        #features {
+            padding: 60px 0;
+            background-color: #f3e5ab;
+        }
+        .feature-box {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .feature-box i {
+            font-size: 40px;
+            color: #ff9800;
+            margin-bottom: 15px;
+        }
+        .feature-box h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .feature-box p {
+            font-size: 16px;
+            color: #555;
+        }
+        .editor-container img {
+            max-width: 200px;
+            height: auto; 
+            margin-right: 20px;
+                
+        }
+        @media (max-width: 768px) {
+            #Mytext {
+                margin: 50px auto;
+                margin-left: 2%;
+                margin-right: 2%;
+                padding: 10px;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 20px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+                animation: fadeIn 0.6s ease-in-out;
+            }
+            #Mytext div{
+                flex-direction: column;
+                text-align: center;
+                flex-direction: column-reverse
+            }
+            
+            #text3{
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+            .editor-container img {
+                max-width: 150px;
+                
+            }
+            #text2{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: right;
+                margin: 20px;
+                flex-direction: column-reverse;
+                justify-content: center;
+            }
+            #text2 p{
+                font-size: 90%;
+            }
+            .btn-custom{
+                width: 100px;
+                font-size: 12px;
+            }
+            .feature-box {
+                margin-top: 2%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="Mytext" class="editor-container">
+        <div id="text2" style="display: flex; align-items: center; justify-content: flex-start; text-align: right; margin: 20px;">
+            <!-- بخش متن -->
+            <div>
+                <h3>تایپما - تایپ صوتی و تبدیل فایل صوتی به متن</h3>
+                <p>تایپما، جایی که صدای شما به متن تبدیل می‌شود، سخن‌تان را بگویید، ما آن را می‌نویسیم! با هر کلمه، دنیای جدیدی بسازید، تجربه‌ای نوین در دنیای تایپ و صدا!</p>
+            </div>
+        
+            <!-- بخش تصویر -->
+            <img src="01.png" alt="Taypma Logo">
+        </div>        
+    </div>
+    <div class="editor-container" id="text3">
+        <div id="editor">
+            <p>شروع تایپ...</p>
+        </div>
+    
+        <!-- سایر اجزا -->
+        <input type="file" id="audioFile" accept="audio/*" style="display: none;">
+        <audio id="audioPlayback" controls></audio>
+    
+        <div class="button-container">
+            <button id="downloadText" class="btn btn-custom"><i class="fas fa-download"></i> دانلود متن</button>
+            <button id="uploadAudio" class="btn btn-custom"><i class="fas fa-upload"></i> آپلود فایل صوتی</button>
+            <button id="recordBtn" class="btn btn-custom"><i class="fas fa-microphone"></i> ضبط</button>
+            <button id="stopBtn" class="btn btn-custom" disabled><i class="fas fa-stop"></i> توقف</button>
+        </div>
+    </div>
+    
+    <!-- سوالات متداول -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">سوالات متداول</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                تایپ صوتی دقیق چگونه عمل می‌کند؟
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            تایپ صوتی دقیق از طریق فناوری تبدیل صوت به متن پیشرفته عمل می‌کند...
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                اشتراک تایپ صوتی و بسته فایل صوتی چه تفاوتی دارند؟
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            اشتراک برای تبدیل هم زمان صحبت شما به متن می باشد. بسته تبدیل فایل صوتی به متن، برای تبدیل انواع فایل های صوتی به متن تایپ شده کاربرد دارد. با توجه به نیاز خود می توانید از این محصولات استفاده کنید.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                دقت تایپ صوتی تایپما چقدر است؟
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            در صورت استفاده از میکروفون مناسب، اینترنت با کیفیت مطلوب و مکانی ساکت دقت بالای 98% خواهد بود. برای فایل های صوتی نزدیک بودن میکروفون به گوینده و نبودن نویز و صدا های اضافی در کیفیت تبدیل تاثیر گذار است.                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingّFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                چگونه فایل صوتی را به متن تبدیل کنم؟
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            برای تبدیل فایل صوتی به متن می توانید بسته فایل صوتی خریداری کرده و سپس از گزینه بارگذاری فایل صوتی، فایل خود را بارگذاری کنید.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                صحبت می کنم ولی چیزی تایپ نمی شود؟!
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            برای انجام تایپ صوتی در ابتدا باید تایپو صدای شما را دریافت کند. این مشکل می تواند به خاطر خراب یا ضعیف بودن میکروفون، تنظیمات نادرست کارت صوتی و یا ندادن مجوز به مرورگر برای دریافت صدا باشد. برای برطرف کردن این مشکل این راهنما را مطالعه کنید.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="headingSix">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                تایپ صوتی برای من به کندی انجام می شود
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            تبدیل صدا به متن را همانند یک مکالمه صوتی فرض کنید، پایین بودن سرعت اینترنت، وجود نویز در صدا و قطعی اینترنت در ارسال و پردازش صدا توسط نرم افزار اختلال ایجاد می کند. در این حالت سعی کنید با اینترنت دیگری تست کنید.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="headingSeven">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                حداکثر زمان یک فایل چقدر است و چگونه فایل را برش دهیم؟
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            فایل شما می تواند تا حداکثر 3 ساعت باشد. برای فایل های طولانی تر می توانید با استفاده از نرم افزارهای برش فایل، فایل خود را به دقایق کمتری تقسیم کنید. می توانید از سایت audiotrimmer.com برای برش فایل استفاده کنید.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="headingEate">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEate" aria-expanded="false" aria-controls="collapseEate">
+                                چگونه از علائم و عبارات جایگزین استفاده کنم؟
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseEate" class="collapse" aria-labelledby="headingEate" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            با رفتن به قسمت علائم جایگزین می تونید علائم و یا عبارات مورد نظر خودتون رو اضافه کنید. مثلا با گفتن عبارت ریسرچ واژه Research تایپ می شود.
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- ویژگی‌ها -->
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title text-center">ویژگی‌های تایپما</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-microphone-alt"></i>
+                        <h3>تبدیل صوت به متن</h3>
+                        <p>با دقت بالا، فایل‌های صوتی شما به متن تبدیل می‌شوند...</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-upload"></i>
+                        <h3>آپلود فایل صوتی</h3>
+                        <p>به راحتی فایل‌های صوتی خود را آپلود کنید...</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-download"></i>
+                        <h3>دانلود متن</h3>
+                        <p>پس از تبدیل صدا به متن، می‌توانید متن را دانلود کنید...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- بخش درباره ما -->
+    <section id="about">
+        <div class="container text-center">
+            <h2 class="section-title">درباره ما</h2>
+            <p class="section-description">تایپما یک سرویس آنلاین تایپ صوتی است که به شما امکان می‌دهد فایل‌های صوتی خود را به متن تبدیل کنید...</p>
+            <div class="image-container">
+                <img src="03.png" alt="Our Team" class="img-fluid">
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // راه‌اندازی CKEditor
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    
+        // قابلیت ضبط صدا با Web API
+        const recordBtn = document.getElementById('recordBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        let mediaRecorder;
+        let audioChunks = [];
+    
+        // شروع ضبط
+        recordBtn.addEventListener('click', () => {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.start();
+                    recordBtn.disabled = true;
+                    stopBtn.disabled = false;
+    
+                    mediaRecorder.ondataavailable = event => {
+                        audioChunks.push(event.data);
+                    };
+    
+                    mediaRecorder.onstop = () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        const audioUrl = URL.createObjectURL(audioBlob);
+                        const audio = document.getElementById('audioPlayback');
+                        audio.src = audioUrl;
+                    };
+                });
+        });
+    
+        // توقف ضبط
+        stopBtn.addEventListener('click', () => {
+            mediaRecorder.stop();
+            recordBtn.disabled = false;
+            stopBtn.disabled = true;
+        });
+    
+        // دانلود متن
+        document.getElementById('downloadText').addEventListener('click', () => {
+            const editorText = document.querySelector('#editor').innerText;
+            const blob = new Blob([editorText], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'typedText.txt';
+            link.click();
+        });
+    </script>
+    
+    </body>    
+</html>
