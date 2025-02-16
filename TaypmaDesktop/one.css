@@ -1,0 +1,16 @@
+:root {
+    sf-img-15: url(data:text/html;base64,CjwhRE9DVFlQRSBodG1sPgo8aHRtbCAgbGFuZz0iZmEiIGNsYXNzPSJub3RyYW5zbGF0ZSIgdHJhbnNsYXRlPSJubyI+CiAgPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBodHRwLWVxdWl2PSJYLVVBLUNvbXBhdGlibGUiIGNvbnRlbnQ9IklFPWVkZ2UiPgogICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xIj4KCTxtZXRhIG5hbWU9InJvYm90cyIgY29udGVudD0ibm90cmFuc2xhdGUiIC8+Cgk8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRlbnQ9InRleHQvaHRtbDsgY2hhcnNldD11dGYtOCIgLz4KPCEtLQkKCTxtZXRhIGh0dHAtZXF1aXY9IkNhY2hlLUNvbnRyb2wiIGNvbnRlbnQ9Im5vLWNhY2hlLCBuby1zdG9yZSwgbXVzdC1yZXZhbGlkYXRlIiAvPgoJPG1ldGEgaHR0cC1lcXVpdj0iUHJhZ21hIiBjb250ZW50PSJuby1jYWNoZSIgLz4KCTxtZXRhIGh0dHAtZXF1aXY9IkV4cGlyZXMiIGNvbnRlbnQ9IjAiIC8+Ci0tPgoJCQkKICAgIDx0aXRsZT7Yqtin24zZviDYtdmI2KrbjCDZiCDYqtio2K/bjNmEINmB2KfbjNmEINi12YjYqtuMINio2Ycg2YXYqtmGINix2KfbjNqv2KfZhiAhINqv2YHYqtin2LEg2KjZhyDZhtmI2LTYqtin2LEg2qnZhNuM2qkg2qnZhtuM2K8hIiAvPgo=)
+}
+
+# Knowledge Base {
+    background-color: #ff9a05 !important;
+    color: white !important;
+}
+
+.bg-primary {
+    background-color: unset !important;
+}
+
+.navbar a:not(.btn):not(.dropdown-item) {
+    color: #FFFFFF;
+}
