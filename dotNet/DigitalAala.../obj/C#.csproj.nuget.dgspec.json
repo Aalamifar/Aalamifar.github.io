@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "H:\\C#\\bot\\C#.csproj": {}
+  },
+  "projects": {
+    "H:\\C#\\bot\\C#.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\C#\\bot\\C#.csproj",
+        "projectName": "C#",
+        "projectPath": "H:\\C#\\bot\\C#.csproj",
+        "packagesPath": "C:\\Users\\Royal Bengal\\.nuget\\packages\\",
+        "outputPath": "H:\\C#\\bot\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Royal Bengal\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Users\\Royal Bengal\\Downloads\\New folder": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[16.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.426\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

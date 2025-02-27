@@ -1,0 +1,48 @@
+C:\Users\Royal Bengal\Desktop\C#\bin\Debug\netcoreapp3.1\C#.exe
+C:\Users\Royal Bengal\Desktop\C#\bin\Debug\netcoreapp3.1\C#.deps.json
+C:\Users\Royal Bengal\Desktop\C#\bin\Debug\netcoreapp3.1\C#.runtimeconfig.json
+C:\Users\Royal Bengal\Desktop\C#\bin\Debug\netcoreapp3.1\C#.runtimeconfig.dev.json
+C:\Users\Royal Bengal\Desktop\C#\bin\Debug\netcoreapp3.1\C#.dll
+C:\Users\Royal Bengal\Desktop\C#\bin\Debug\netcoreapp3.1\C#.pdb
+C:\Users\Royal Bengal\Desktop\C#\obj\Debug\netcoreapp3.1\C#.csprojAssemblyReference.cache
+C:\Users\Royal Bengal\Desktop\C#\obj\Debug\netcoreapp3.1\C#.AssemblyInfoInputs.cache
+C:\Users\Royal Bengal\Desktop\C#\obj\Debug\netcoreapp3.1\C#.AssemblyInfo.cs
+C:\Users\Royal Bengal\Desktop\C#\obj\Debug\netcoreapp3.1\C#.csproj.CoreCompileInputs.cache
+C:\Users\Royal Bengal\Desktop\C#\obj\Debug\netcoreapp3.1\C#.dll
+C:\Users\Royal Bengal\Desktop\C#\obj\Debug\netcoreapp3.1\C#.pdb
+C:\Users\Royal Bengal\Desktop\C#\obj\Debug\netcoreapp3.1\C#.genruntimeconfig.cache
+C:\Users\Royal Bengal\Desktop\C#\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Royal Bengal\Desktop\C#\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+C:\Users\Royal Bengal\Desktop\C#\obj\Debug\netcoreapp3.1\C#.csproj.CopyComplete
+C:\Users\Royal Bengal\Desktop\C#\bot\obj\Debug\netcoreapp3.1\C#.csprojAssemblyReference.cache
+C:\Users\Royal Bengal\Desktop\C#\bot\obj\Debug\netcoreapp3.1\C#.AssemblyInfoInputs.cache
+C:\Users\Royal Bengal\Desktop\C#\bot\obj\Debug\netcoreapp3.1\C#.AssemblyInfo.cs
+C:\Users\Royal Bengal\Desktop\C#\bot\obj\Debug\netcoreapp3.1\C#.csproj.CoreCompileInputs.cache
+C:\Users\Royal Bengal\Desktop\C#\bot\obj\Debug\netcoreapp3.1\C#.dll
+C:\Users\Royal Bengal\Desktop\C#\bot\obj\Debug\netcoreapp3.1\C#.pdb
+C:\Users\Royal Bengal\Desktop\C#\bot\bin\Debug\netcoreapp3.1\C#.exe
+C:\Users\Royal Bengal\Desktop\C#\bot\bin\Debug\netcoreapp3.1\C#.deps.json
+C:\Users\Royal Bengal\Desktop\C#\bot\bin\Debug\netcoreapp3.1\C#.runtimeconfig.json
+C:\Users\Royal Bengal\Desktop\C#\bot\bin\Debug\netcoreapp3.1\C#.runtimeconfig.dev.json
+C:\Users\Royal Bengal\Desktop\C#\bot\bin\Debug\netcoreapp3.1\C#.dll
+C:\Users\Royal Bengal\Desktop\C#\bot\bin\Debug\netcoreapp3.1\C#.pdb
+C:\Users\Royal Bengal\Desktop\C#\bot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Royal Bengal\Desktop\C#\bot\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+C:\Users\Royal Bengal\Desktop\C#\bot\obj\Debug\netcoreapp3.1\C#.csproj.CopyComplete
+C:\Users\Royal Bengal\Desktop\C#\bot\obj\Debug\netcoreapp3.1\C#.genruntimeconfig.cache
+H:\C#\bot\bin\Debug\netcoreapp3.1\C#.exe
+H:\C#\bot\bin\Debug\netcoreapp3.1\C#.deps.json
+H:\C#\bot\bin\Debug\netcoreapp3.1\C#.runtimeconfig.json
+H:\C#\bot\bin\Debug\netcoreapp3.1\C#.runtimeconfig.dev.json
+H:\C#\bot\bin\Debug\netcoreapp3.1\C#.dll
+H:\C#\bot\bin\Debug\netcoreapp3.1\C#.pdb
+H:\C#\bot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+H:\C#\bot\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+H:\C#\bot\obj\Debug\netcoreapp3.1\C#.csprojAssemblyReference.cache
+H:\C#\bot\obj\Debug\netcoreapp3.1\C#.AssemblyInfoInputs.cache
+H:\C#\bot\obj\Debug\netcoreapp3.1\C#.AssemblyInfo.cs
+H:\C#\bot\obj\Debug\netcoreapp3.1\C#.csproj.CoreCompileInputs.cache
+H:\C#\bot\obj\Debug\netcoreapp3.1\C#.csproj.CopyComplete
+H:\C#\bot\obj\Debug\netcoreapp3.1\C#.dll
+H:\C#\bot\obj\Debug\netcoreapp3.1\C#.pdb
+H:\C#\bot\obj\Debug\netcoreapp3.1\C#.genruntimeconfig.cache
