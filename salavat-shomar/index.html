@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صلوات شمار آنلاین زیبا</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+            background: linear-gradient(rgba(0, 50, 0, 0.7), rgba(0, 30, 0, 0.8)), url('https://img.freepik.com/premium-vector/eid-mubarak-islamic-with-green-dome-nabawi-mosque-arabic-calligraphy-banner-background_36073-1907.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #ffd700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-size: 36px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        .counter {
+            font-size: 72px;
+            margin: 30px 0;
+            color: #ffd700;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.6);
+            transition: transform 0.3s ease;
+        }
+        .counter.animate {
+            transform: scale(1.2);
+        }
+        button {
+			font-family: 'Vazir', 'Tahoma', sans-serif;
+            background: linear-gradient(#228b22, #006400);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        .total {
+            font-size: 28px;
+            color: #ffd700;
+            margin: 30px 0;
+        }
+        .note {
+            font-size: 18px;
+            color: #fff;
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .history {
+            margin-top: 50px;
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .history ul {
+            list-style: none;
+            padding: 0;
+        }
+        .history li {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #ffd700;
+        }
+        .text-section {
+            margin-top: 50px;
+            text-align: right;
+            font-size: 18px;
+            line-height: 2;
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .text-section h3 {
+            color: #ffd700;
+            text-align: center;
+            font-size: 28px;
+        }
+        .arabic {
+            font-family: 'Traditional Arabic', serif;
+            font-size: 22px;
+            color: #fff;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #ffd700;
+        }
+        /* ====== Mobile Responsive ====== */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+        background-attachment: scroll;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .counter {
+        font-size: 48px;
+        margin: 20px 0;
+    }
+
+    button {
+        width: 100%;
+        font-size: 20px;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 40px;
+    }
+
+    .total {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .note {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .history {
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    .history h2 {
+        font-size: 20px;
+    }
+
+    .history li {
+        font-size: 16px;
+    }
+
+    .text-section {
+        font-size: 15px;
+        padding: 15px;
+        line-height: 1.9;
+    }
+
+    .text-section h3 {
+        font-size: 22px;
+    }
+
+    .arabic {
+        font-size: 18px;
+    }
+
+    .footer {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>صلوات شمار آنلاین</h1>
+        <p>برای سلامتی و تعجیل در فرج امام زمان (عج)</p>
+        
+        <div class="counter" id="counter">0</div>
+        <button id="incrementBtn">لمس کنید (صلوات بفرستید)</button>
+        <button id="registerBtn">ثبت صلوات‌ها</button>
+        
+        <div class="total">صلوات‌های فرستاده‌شده کلی: <span id="total">0</span></div>
+        
+        <div class="note">
+            کاربر محترم، ثبت تعداد صلوات به منزله تعهد شما نسبت به قرائت آن تعداد می‌باشد.
+        </div>
+        
+        <div class="history">
+            <h2>تاریخچه صلوات‌های روزانه (۷ روز اخیر)</h2>
+            <ul id="historyList"></ul>
+        </div>
+        
+        <div class="text-section">
+            <h3>زیارت عاشورا</h3>
+            <p class="arabic">السَّلامُ عَلَیْکَ یَا أَبَا عَبْدِ اللَّهِ...</p>
+            <!-- متن کامل زیارت عاشورا را اینجا بگذارید -->
+            
+            <h3>حدیث کسا</h3>
+            <p class="arabic">عَنْ فاطِمَهَ الزَّهْراَّءِ عليها السلام قالت: دخل علي أبي رسول الله صلى الله عليه وآله...</p>
+            <!-- متن کامل حدیث کسا را اینجا بگذارید -->
+        </div>
+        
+        <p class="footer">اللهم صل على محمد و آل محمد وعجل فرجهم</p>
+    </div>
+
+    <script>
+        let count = 0;
+        let total = parseInt(localStorage.getItem('totalSalawat')) || 0;
+        let lastDate = localStorage.getItem('lastDate');
+        let history = JSON.parse(localStorage.getItem('history')) || [];
+
+        const today = new Date().toISOString().split('T')[0];
+
+        if (lastDate && lastDate !== today) {
+            const remaining = parseInt(localStorage.getItem('currentCount')) || 0;
+            if (remaining > 0) {
+                history.push({ date: lastDate, count: remaining });
+                if (history.length > 7) history.shift();
+                localStorage.setItem('history', JSON.stringify(history));
+            }
+            count = 0;
+            localStorage.setItem('currentCount', count);
+        }
+
+        count = parseInt(localStorage.getItem('currentCount')) || 0;
+        document.getElementById('counter').textContent = count;
+        document.getElementById('total').textContent = total;
+
+        const historyList = document.getElementById('historyList');
+        history.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.date}: ${item.count} صلوات`;
+            historyList.appendChild(li);
+        });
+
+        document.getElementById('incrementBtn').addEventListener('click', () => {
+            count++;
+            const counterEl = document.getElementById('counter');
+            counterEl.textContent = count;
+            counterEl.classList.add('animate');
+            setTimeout(() => counterEl.classList.remove('animate'), 300);
+            localStorage.setItem('currentCount', count);
+            localStorage.setItem('lastDate', today);
+        });
+
+        document.getElementById('registerBtn').addEventListener('click', () => {
+            if (count > 0) {
+                total += count;
+                localStorage.setItem('totalSalawat', total);
+                document.getElementById('total').textContent = total;
+                count = 0;
+                document.getElementById('counter').textContent = count;
+                localStorage.setItem('currentCount', count);
+            }
+        });
+    </script>
+</body>
+</html>
